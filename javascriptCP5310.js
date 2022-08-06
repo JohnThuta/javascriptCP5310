@@ -1,77 +1,4 @@
-<!DOCTYPE html>
-<!-- THANKS TO: free images.com/ ,  -->
 
-<html lang="en" xmlns="">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <head>
-    <title>Page Title</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-</head>
-
-<body>
-<header>
-
-    <h1>
-        <p id="myUni">PAGE NOT FOUND</p>
-    </h1>
-
-    <script>
-        let bannerID = 0;
-
-        function text(msg,ctrlwidth) {
-        msg = "NOTHING IN HERE         " + msg
-        let newMsg = msg
-        while (newMsg.length < ctrlwidth) {
-        newMsg += msg
-    }
-        document.write ('<FORM NAME="Scrolltext" >');
-        document.write ('<INPUT NAME="text" VALUE= "'+newMsg+'" SIZE= '+ctrlwidth+' >');
-        document.write ('</FORM>');
-        /*const bannerID = null;*/
-        rollMsg()
-    }
-        function rollMsg() {
-        let NowMsg = document.Scrolltext.text.value
-        NowMsg = NowMsg.substring(1,NowMsg.length)+NowMsg.substring(0,1)
-        document.Scrolltext.text.value = NowMsg
-        bannerID = setTimeout("rollMsg()",100)//change the number 100 to represent the speed of the scroll. The larger the number the slower it moves
-    }
-    </script>
-    <script>
-        myMsg = "          We are -SORRY- ";
-        msg = myMsg;
-        ctrlwidth = "234" //change this number to the length you would like the message box to be
-        text(msg,ctrlwidth);
-    </script>
-</header>
-
-<section>
-    <article>
-
-        <div>
-
-            <canvas id="myCanvas" width="800" height="300" ></canvas>
-        </div>
-        <aside>
-            <!-- BUTTONS -->
-            <section>
-                <form action="../">
-                    <button class="center" onclick="demo(0,0,0,0)" type="button">
-                        PLAY
-                    </button>
-                    <button type="submit">
-                        Home
-                    </button>
-                </form>
-            </section>
-        </aside>
-    </article>
-</section>
-<footer>    </footer>
-</body>
-<!-- Draw the shark -->
-<script>
     /**
     * I still have to fix the coordinates or rather I have to rewrite the functions in such a way as to take into
     * account the real coordinates. At present the code is too large and must and can be streamlined.
@@ -94,12 +21,9 @@
     let stopFunc = [];
     let timeOut = [];
 
-    const positions = [7,100,27,120,57,170,97,170,107,160,117,170,197,160,227,140,227,90,267,120,
-    297,160,397,180,417,175,467,170,497,170,487,180,487,190,477,180,472,195,467,185,
-    462,197,457,188,452,199,447,189,442,201,437,190,432,203,427,191,422,205,417,207,
-    412,207,407,209,397,210,412,215,422,225,427,215,432,235,437,220,442,235,447,225,
-    452,242,457,242,462,235,467,250,367,245,297,260,257,370,247,260,197,250,167,280,
-    177,250,127,240,107,250,97,240,97,230,57,210,17,260,27,200,7,100
+    const positions = [6,154,50,131,106,118,107,65,115,15,152,52,
+        184,89,233,76,289,63,268,112,236,150,258,179,282,235,217,220,
+        180,208,144,250,99,283,88,238,93,195,53,177
     ];
 
     //const extraPositions = [297,180,287,230,307,180,297,230,317,180,307,230,27,150,37,160,
@@ -558,5 +482,3 @@
 },6200));
 
 }
-</script>
-</html>
